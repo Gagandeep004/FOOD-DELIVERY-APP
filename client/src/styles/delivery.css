@@ -1,0 +1,120 @@
+body{
+    background:#f5f5f5;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.delivery-container{
+    width:90%;
+    margin:40px auto;
+}
+
+.delivery-title{
+    color:#ff5722;
+    font-size:40px;
+    margin-bottom:30px;
+}
+
+.order-card{
+    background:#fff;
+    border-radius:15px;
+    padding:25px;
+    margin-bottom:25px;
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+    transition:.3s;
+}
+
+.order-card:hover{
+    transform:translateY(-5px);
+}
+
+.order-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+}
+
+.customer-name{
+    font-size:24px;
+    font-weight:bold;
+}
+
+.order-id{
+    color:gray;
+    font-size:14px;
+    margin-top:5px;
+}
+
+.total{
+    font-size:26px;
+    color:#28a745;
+    font-weight:bold;
+}
+
+.address{
+    margin:15px 0;
+    font-size:17px;
+}
+
+.status{
+    display:inline-block;
+    padding:8px 20px;
+    border-radius:30px;
+    color:white;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+.pending{
+    background:#ff9800;
+}
+
+.accepted{
+    background:#2196f3;
+}
+
+.delivery{
+    background:#673ab7;
+}
+
+.delivered{
+    background:#4caf50;
+}
+
+.button-group{
+    display:flex;
+    gap:15px;
+    margin-top:20px;
+}
+
+.button-group button{
+    border:none;
+    color:white;
+    padding:12px 22px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:15px;
+    transition:.3s;
+}
+
+.button-group button:hover{
+    transform:scale(1.05);
+}
+
+.accept-btn{
+    background:#2196f3;
+}
+
+.out-btn{
+    background:#ff9800;
+}
+
+.done-btn{
+    background:#4caf50;
+}
+
+.empty-orders{
+    text-align:center;
+    margin-top:80px;
+    color:gray;
+}
