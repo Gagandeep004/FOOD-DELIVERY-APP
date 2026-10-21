@@ -82,6 +82,7 @@ function Login() {
                         type="email"
                         name="email"
                         placeholder="Email"
+                        value={formData.email}
                         onChange={handleChange}
                     />
 
@@ -89,10 +90,11 @@ function Login() {
                         type="password"
                         name="password"
                         placeholder="Password"
+                        value={formData.password}
                         onChange={handleChange}
                     />
 
-                    <button>
+                    <button type="submit">
 
                         Login
 

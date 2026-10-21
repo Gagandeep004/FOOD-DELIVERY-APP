@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-import API from "../../services/api";
-import "../../styles/delivery.css";
+import API from "../services/api";
+import "../styles/delivery.css";
+
 
 function DeliveryDashboard() {
   const [orders, setOrders] = useState([]);

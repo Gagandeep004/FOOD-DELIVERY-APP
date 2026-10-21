@@ -73,18 +73,23 @@ function Register() {
                     <input
                         name="name"
                         placeholder="Name"
+                        value={formData.name}
                         onChange={handleChange}
                     />
 
                     <input
+                        type="email"
                         name="email"
                         placeholder="Email"
+                        value={formData.email}
                         onChange={handleChange}
                     />
 
                     <input
+                        type="tel"
                         name="phone"
                         placeholder="Phone"
+                        value={formData.phone}
                         onChange={handleChange}
                     />
 
@@ -92,6 +97,7 @@ function Register() {
                         type="password"
                         name="password"
                         placeholder="Password"
+                        value={formData.password}
                         onChange={handleChange}
                     />
 
@@ -120,7 +126,7 @@ function Register() {
 
                     </select>
 
-                    <button>
+                    <button type="submit">
 
                         Register
 
