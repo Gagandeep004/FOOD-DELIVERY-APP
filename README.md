@@ -47,8 +47,17 @@ Then open `http://localhost:5000`.
 
 - The backend serves client static files in production.
 - The client API uses `/api` by default in production.
+- Netlify proxies `/api/*` requests to the Render backend, so the browser does not make cross-origin API requests.
+- `render.yaml` configures the backend service. Set `MONGO_URI` to your MongoDB Atlas connection string and set a strong `JWT_SECRET` in Render before deploying.
 - Vercel is configured with `vercel.json` for a static client build and Node API function.
 - Set Vercel environment variables: `MONGO_URI`, `JWT_SECRET`, and any other secrets.
+
+### Deploying to Netlify and Render
+
+1. In Render, create a new Blueprint from this repository and apply the `render.yaml` configuration. Enter `MONGO_URI` and `JWT_SECRET` when prompted; keep both values private.
+2. Wait for the Render web service health check to pass at `/`.
+3. In Netlify, trigger a new deploy so it applies the `/api/*` proxy rule from `netlify.toml`.
+4. Test the deployed site. API calls should use the Netlify site's own `/api` path and be forwarded to Render.
 
 ### Deploying to Vercel
 
